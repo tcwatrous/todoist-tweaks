@@ -7,7 +7,7 @@ Unofficial Firefox extension for Todoist: custom accent color, task-complete sou
 
 - **Accent color:** pick any color (or one of 12 presets) and Todoist's accent changes everywhere, including its hover and pressed shades. Priority flags, overdue dates and project colors are left alone.
 - **Task-complete sound:** replace Todoist's completion sound with one of 12 built-in sounds, from a soft pop to a little celebratory arpeggio. Includes a volume slider and a preview for each sound. Or keep Todoist's original.
-- **Tab icon:** replace Todoist's tab icon with an image of your choice (see setup below).
+- **White tab icon:** replace Todoist's red tab icon with a white one on a transparent background, which stands out on dark browser themes. Can be turned on or off from the popup.
 - Changes apply live, with no page reload, and work with Todoist's light and dark themes.
 
 ## Install
