@@ -1,0 +1,60 @@
+{
+  "manifest_version": 2,
+  "name": "Todoist Accent & Sound",
+  "version": "1.2.0",
+  "description": "Pick your own accent color, task-complete sound and tab icon for the Todoist web app.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "todoist-accent@timwatro.us",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+  }
+    }
+  },
+  "icons": {
+    "48": "icon.svg",
+    "96": "icon.svg"
+  },
+  "permissions": [
+    "storage",
+    "*://*.todoist.com/*",
+    "*://*.todoist.net/*",
+    "*://todoist.b-cdn.net/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.todoist.com/*"
+      ],
+      "js": [
+        "sounds.js",
+        "complete-sound.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://*.todoist.com/*"
+      ],
+      "js": [
+        "content.js",
+        "favicon.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_action": {
+    "default_title": "Todoist Accent & Sound",
+    "default_popup": "popup.html",
+    "default_icon": "icon.svg"
+  },
+  "web_accessible_resources": [
+    "favicon-white.png"
+  ]
+}
